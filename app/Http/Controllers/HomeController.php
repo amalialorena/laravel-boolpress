@@ -23,8 +23,8 @@ class HomeController extends Controller
      */
     public function home()
     {
-        return view('pages.home');
+        $posts = Post::all();
+        return view('pages.home', compact('posts'));
     }
-
    
 }
