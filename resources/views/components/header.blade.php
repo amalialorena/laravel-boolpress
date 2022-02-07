@@ -1,8 +1,22 @@
 <header>
     <h1>Blog</h1>
     @auth
-        <h1>{{ Auth::user()->name }}</h1>
+        <h1>Welcome back {{ Auth::user()->name }}</h1>
         <a class="btn btn-secondary" href="{{ route('logout') }}">LOGOUT</a>
+
+    <form class="post-form" action="{{ route('post.create') }}" method="POST">
+        @method('POST')
+        @csrf
+
+        <label for="title"></label>
+        <input type="text" placeholder="title" name="title">
+        <label for="text"></label>
+        <textarea name="text" id="" cols="30" rows="10" placeholder="Your text"></textarea>
+        <input type="submit" value="Create new post">
+    </form>
+
+   
+
     @else
 
         <h1>login/register</h1>
