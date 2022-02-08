@@ -2,7 +2,7 @@
     <h1>Blog</h1>
     @auth
         <h1>Welcome back {{ Auth::user()->name }}</h1>
-        <a class="btn btn-secondary" href="{{ route('logout') }}">LOGOUT</a>
+        <a class="btn btn-secondary" href="{{ route('logout') }}">LOGOUT</a> 
        
 
         {{-- <form class="post-form" action="{{ route('post.store') }}" method="POST">

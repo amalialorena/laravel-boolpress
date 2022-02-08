@@ -26,6 +26,6 @@ class UserController extends Controller
         ]);
         $data['author'] = Auth::user() -> name;
         $post = Post::create($data);
-        return redirect() -> route('/post/store');
+        return redirect() -> route('home');
     }
 }
