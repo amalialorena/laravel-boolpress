@@ -14,7 +14,8 @@ class UserController extends Controller
     }
 
     public function createPost(){
-        return view('pages.create-post');
+        $posts = Post::orderBy('created_at', 'DESC')->get();
+        return view('pages.create-post', compact('posts'));
     }
 
     public function storePost(Request $request) {

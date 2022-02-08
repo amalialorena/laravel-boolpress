@@ -3,8 +3,9 @@
     @auth
         <h1>Welcome back {{ Auth::user()->name }}</h1>
         <a class="btn btn-secondary" href="{{ route('logout') }}">LOGOUT</a>
+       
 
-        <form class="post-form" action="{{ route('post.store') }}" method="POST">
+        {{-- <form class="post-form" action="{{ route('post.store') }}" method="POST">
             @method('POST')
             @csrf
 
@@ -13,7 +14,7 @@
             <label for="text"></label>
             <textarea name="text" id="" cols="30" rows="10" placeholder="Your text"></textarea>
             <input type="submit" value="Create new post">
-        </form>
+        </form> --}}
 
     @else
 
