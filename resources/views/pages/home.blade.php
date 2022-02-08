@@ -9,8 +9,10 @@
     @foreach ($posts as $post)
         <div class=post>
             <h2> {{ $post->title }}</h3>
-                <p> {{ $post->text }}</p>
-                <p> Author: {{ $post->author }}</p>
+                <p> {{ $post-> text }}</p>
+                <p> Author: {{ $post-> author }}</p>
+                <p> date: {{ $post -> created_at }}</p>
+                <h2> category :{{ $post -> category -> name}}</h2>
         </div>
     @endforeach
 

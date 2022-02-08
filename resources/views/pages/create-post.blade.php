@@ -11,16 +11,11 @@
         <label for="text"></label>
         <textarea name="text" id="" cols="30" rows="10" placeholder="Your text"></textarea>
         <input type="submit" value="Create new post">
+        <select name="category" id="category">
+            @foreach ($categories as $category)
+                <option name="category" value="{{ $category->id }}"> {{ $category->name }} </option>
+            @endforeach
+        </select>
     </form>
-
-    {{-- @foreach ($posts as $post)
-<div class=post>
-    <h2> {{ $post -> title }}</h3>
-    <p>  {{ $post -> text }}</p>
-    <p> Author: {{ $post -> author }}</p>
-
-</div>
-    
-@endforeach --}}
 
 @endsection
