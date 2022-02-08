@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Post;
 class HomeController extends Controller
 {
@@ -23,23 +24,8 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('created_at', 'DESC')->get();
         return view('pages.home', compact('posts'));
-    }
-
-    public function createPost(){
-        return view('pages.create-post');
-    }
-
-    public function storePost(Request $request){
-
-        $data = $request -> validate([
-            'title'=>'request|string|min:4|max:100',
-            'text'=>'string|request',
-        ]);
-        $data['author'] = Auth::user()->name;
-        $post= Post::create($data);
-        return redirect() -> route('home');
     }
    
 }

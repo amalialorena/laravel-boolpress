@@ -4,22 +4,30 @@
         <h1>Welcome back {{ Auth::user()->name }}</h1>
         <a class="btn btn-secondary" href="{{ route('logout') }}">LOGOUT</a>
 
-    <form class="post-form" action="{{ route('post.create') }}" method="POST">
-        @method('POST')
-        @csrf
+        <form class="post-form" action="{{ route('post.store') }}" method="POST">
+            @method('POST')
+            @csrf
 
-        <label for="title"></label>
-        <input type="text" placeholder="title" name="title">
-        <label for="text"></label>
-        <textarea name="text" id="" cols="30" rows="10" placeholder="Your text"></textarea>
-        <input type="submit" value="Create new post">
-    </form>
-
-   
+            <label for="title"></label>
+            <input type="text" placeholder="title" name="title">
+            <label for="text"></label>
+            <textarea name="text" id="" cols="30" rows="10" placeholder="Your text"></textarea>
+            <input type="submit" value="Create new post">
+        </form>
 
     @else
 
         <h1>login/register</h1>
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
         <h2>Register:</h2>
         <form action="{{ route('register') }}" method="POST">

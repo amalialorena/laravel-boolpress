@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table-> text('text');
             $table-> string('author', 60);
             $table-> integer('likes') -> unsigned() ->default(0);
-            $table->timestamps();
+            $table-> timestamps();
         });
     }
 
