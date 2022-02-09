@@ -21,10 +21,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@home')->name('home');
 
-Route::get('/post/create', 'UserController@createPost')-> name('post.create');
-Route::post('/post/store', 'UserController@storePost')-> name('post.store');
+Route::get('/post/create', 'PostController@createPost')-> name('post.create');
+Route::post('/post/store', 'PostController@storePost')-> name('post.store');
 
-Route::post('/post/edit/{id}', 'HomeController@editPost')->name('post.edit');
+Route::get('/post/edit/{id}', 'PostController@edit')->name('post.edit');
 
 Route::post('/register','Auth\RegisterController@register')->name('register');
 

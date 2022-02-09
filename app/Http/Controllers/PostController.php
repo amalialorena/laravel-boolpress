@@ -8,7 +8,7 @@ use App\Post;
 use App\Category;
 use App\Tag;
 
-class UserController extends Controller
+class PostController extends Controller
 {
      public function __construct()
     {
@@ -43,10 +43,12 @@ class UserController extends Controller
         return redirect() -> route('home');
     }
 
-    public function edit() {
-
-
-        return view('pages.edit');
+    public function edit ($id) {
+        $categories = Category::all();
+        $tags = Tag::all();
+        $post = Post::findOrFail($id);
+        
+        return view('pages.edit', compact('categories', 'tags', 'post'));
 
     }
 
