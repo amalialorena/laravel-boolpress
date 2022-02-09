@@ -9,11 +9,16 @@
 
     @foreach ($posts as $post)
         <div class=post>
-            <h2> {{ $post->title }}</h3>
-                <p> {{ $post-> text }}</p>
+            <h2> Post Title: {{ $post->title }}</h3>
+                <p> Post text: {{ $post-> text }}</p>
                 <p> Author: {{ $post-> author }}</p>
                 <p> date: {{ $post -> created_at }}</p>
-                <h2> category :{{ $post -> category -> name}}</h2>
+                <p> category: {{ $post -> category -> name}}</p>
+                <p> tags: 
+                    @foreach ($post -> tags as $tag)
+                        {{ $tag -> name }},
+                    @endforeach  
+                </p>
         </div>
     @endforeach
 
