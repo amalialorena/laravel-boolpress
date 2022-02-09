@@ -4,7 +4,7 @@
 @auth
     
 
-    <form class="post-form" action="{{ route('post.store') }}" method="POST">
+    <form class="post-form" action="{{ route('post.update', $post -> id) }}" method="POST">
         @method('POST')
         @csrf
 
@@ -12,15 +12,12 @@
         <input type="text" placeholder="title" name="title" value="{{$post -> title}}">
         <label for="text"></label>
         <textarea name="text" id="" cols="30" rows="10">{{$post -> text}}</textarea>
-        <input type="submit" value="Create new post">
         <select name="category" id="category">
             @foreach ($categories as $category)
-                <option name="category" value="{{ $category->id }}"
+                <option name="category" value="{{ $category->id }}" 
                     @if ($category -> id == $post -> category -> id)
                         selected
                     @endif
-                    
-                    
                     > {{ $category->name }} </option>
             @endforeach
         </select>

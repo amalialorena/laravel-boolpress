@@ -19,7 +19,7 @@
                         {{ $tag -> name }},
                     @endforeach  
                 </p>
-                <a class="btn btn-primary"href="{{route('post.edit', $post-> id)}}">EDIT</a>
+                <a class="btn btn-primary"href="{{ route('post.edit', $post-> id) }}"> EDIT</a>
         </div>
     @endforeach
 
