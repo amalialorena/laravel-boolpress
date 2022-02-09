@@ -28,7 +28,18 @@
         <div>
             <h4>Tags:</h4>
             @foreach ($tags as $tag)
-            <input type="checkbox"  name="tags[]" value="{{ $tag -> id}}"> {{ $tag -> name}} <br>
+
+            <input type="checkbox"  name="tags[]" value="{{ $tag -> id}}"
+
+                @foreach ($post -> tags as $postTag)
+                
+                    @if ($tag -> id == $postTag -> id)
+                        checked
+                    @endif
+
+                @endforeach
+            
+            > {{ $tag -> name}} <br>
             @endforeach
             <input class="btn" type="submit" value="CREATE">
         </div>
