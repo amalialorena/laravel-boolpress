@@ -24,6 +24,8 @@ Route::get('/', 'HomeController@home')->name('home');
 Route::get('/post/create', 'UserController@createPost')-> name('post.create');
 Route::post('/post/store', 'UserController@storePost')-> name('post.store');
 
+Route::post('/post/edit/{id}', 'HomeController@editPost')->name('post.edit');
+
 Route::post('/register','Auth\RegisterController@register')->name('register');
 
 Route::post('/login','Auth\LoginController@login')->name('login');

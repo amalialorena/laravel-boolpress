@@ -43,5 +43,12 @@ class UserController extends Controller
         return redirect() -> route('home');
     }
 
+    public function edit() {
+
+
+        return view('pages.edit');
+
+    }
+
     
 }

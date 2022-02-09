@@ -1,8 +1,10 @@
 @extends('layout.main-layout')
 
 @section('content')
+@auth
+    
 
-    <form class="post-form" action="{{ route('post.edit') }}" method="POST">
+    <form class="post-form" action="{{ route('post.store') }}" method="POST">
         @method('POST')
         @csrf
 
@@ -26,5 +28,5 @@
         </div>
 
     </form>
-
+    @endauth
 @endsection

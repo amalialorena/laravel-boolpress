@@ -19,6 +19,7 @@
                         {{ $tag -> name }},
                     @endforeach  
                 </p>
+                <a class="btn btn-primary"href="#">EDIT</a>
         </div>
     @endforeach
 
