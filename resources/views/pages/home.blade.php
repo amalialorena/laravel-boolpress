@@ -4,6 +4,7 @@
     @auth
     <br/>
         <a class="btn btn-primary" href="{{ route('post.create') }}">CREATE POST</a>
+        <br/>
     @endauth
 
     @foreach ($posts as $post)
