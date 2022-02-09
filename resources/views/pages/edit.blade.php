@@ -41,7 +41,7 @@
             
             > {{ $tag -> name}} <br>
             @endforeach
-            <input class="btn" type="submit" value="CREATE">
+            <input class="btn btn-primary" type="submit" value="UPDATE">
         </div>
 
     </form>

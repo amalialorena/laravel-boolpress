@@ -49,8 +49,35 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         
         return view('pages.edit', compact('categories', 'tags', 'post'));
+    }
+
+    public function update (Request $request, $id) {
+
+       
+        $data = $request -> validate([
+            'title' => 'required|string|min:4|max:100',
+            'text' => 'required|string',
+        ]);
+
+        $post = Post::findOrFail($id);
+        $post -> update($data);
+
+        $category = Category::findOrFail($request -> get('category'));
+        $post -> category() ->associate($category);
+        $post -> save();
+
+        $tags = Tag::findOrFail($request -> get('tags'));
+        $post -> tags() -> sync($tags);
+        $post -> save();
+
+        return redirect() -> route('home');
+        
 
     }
+
+    // public function delete ($id) {
+
+    // }
 
     
 }

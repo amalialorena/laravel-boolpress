@@ -24,7 +24,10 @@ Route::get('/', 'HomeController@home')->name('home');
 Route::get('/post/create', 'PostController@createPost')-> name('post.create');
 Route::post('/post/store', 'PostController@storePost')-> name('post.store');
 
-Route::get('/post/edit/{id}', 'PostController@edit')->name('post.edit');
+Route::get('/post/edit/{id}', 'PostController@edit')-> name('post.edit');
+Route::post('/post/update{id}', 'PostController@update')-> name('post.update');
+
+// Route::post('/post/delete/{id}', 'PostController@delete')-> name('post.delete');
 
 Route::post('/register','Auth\RegisterController@register')->name('register');
 

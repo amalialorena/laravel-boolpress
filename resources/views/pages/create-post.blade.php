@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <form class="post-form" action="{{ route('post.edit') }}" method="POST">
+    <form class="post-form" action="{{ route('post.update', $post -> id) }}" method="POST">
         @method('POST')
         @csrf
 
@@ -22,7 +22,7 @@
             @foreach ($tags as $tag)
             <input type="checkbox"  name="tags[]" value="{{ $tag -> id}}"> {{ $tag -> name}} <br>
             @endforeach
-            <input class="btn" type="submit" value="CREATE">
+            <input class="btn btn-primary" type="submit" value="CREATE">
         </div>
 
     </form>
