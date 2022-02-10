@@ -1,7 +1,7 @@
 <header>
     <h1>Blog</h1>
     @auth
-        <h1>Welcome back {{ Auth::user()->name }}</h1>
+        <div>Welcome back <strong>{{ Auth::user()->name }}</strong></div>
         <a class="btn btn-secondary" href="{{ route('logout') }}">LOGOUT</a> 
     @else
 

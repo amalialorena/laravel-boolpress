@@ -1,11 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@300;
 
-/*!
- * Bootstrap v4.6.1 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+400;700&display=swap);@charset "UTF-8";
 
 :root {
   --blue: #3490dc;
@@ -10973,5 +10968,67 @@ body {
   width: 600px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+header {
+  background-color: #f3d6d6;
+  padding: 0px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: bolder;
+}
+
+.post {
+  width: 600px;
+  margin: auto;
+  background-color: white;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  padding: 24px 32px 32px;
+  text-align: left;
+  position: relative;
+}
+
+.post .category {
+  color: #3490dc;
+}
+
+.post h2 {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.post .author {
+  display: block;
+  margin-bottom: 24px;
+  color: #999;
+}
+
+.post .tags {
+  margin-bottom: 10px;
+}
+
+.post .tags .tag {
+  display: inline-block;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  margin-right: 8px;
+  border-radius: 8px;
+  padding: 4px 6px;
+  margin-bottom: 8px;
+}
+
+.post .action-bar {
+  text-align: right;
+}
+
+footer {
+  background-color: #998a8a;
+  color: #4e4242;
+  padding: 60px;
 }
 
