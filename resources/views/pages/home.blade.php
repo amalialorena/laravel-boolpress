@@ -20,6 +20,7 @@
                     @endforeach  
                 </p>
                 <a class="btn btn-primary"href="{{ route('post.edit', $post-> id) }}"> EDIT</a>
+                <a class="btn btn-danger"href="{{ route('post.delete', $post-> id) }}"> DELETE</a>
         </div>
     @endforeach
 
