@@ -10967,7 +10967,41 @@ body {
   flex-direction: column;
   width: 600px;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 40px auto;
+  min-height: 100vh;
+}
+
+.post-form textarea {
+  resize: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.post-form input {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.post-form h4 {
+  text-align: left;
+}
+
+.post-form .tags {
+  width: 600px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.post-form .tags label {
+  margin: 0;
+}
+
+.post-form .tags .tag {
+  display: inline-block;
+}
+
+.post-form .tags input {
+  margin-right: 8px;
 }
 
 header {
@@ -11008,11 +11042,15 @@ header h1 {
   color: #999;
 }
 
-.post .tags {
+.post .action-bar {
+  text-align: right;
+}
+
+.tags {
   margin-bottom: 10px;
 }
 
-.post .tags .tag {
+.tags .tag {
   display: inline-block;
   background-color: #eee;
   border: 1px solid #ddd;
@@ -11020,10 +11058,6 @@ header h1 {
   border-radius: 8px;
   padding: 4px 6px;
   margin-bottom: 8px;
-}
-
-.post .action-bar {
-  text-align: right;
 }
 
 footer {

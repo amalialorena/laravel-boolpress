@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
 
 // Variables
 @import "variables";
@@ -17,7 +17,41 @@ body {
     flex-direction: column;
     width: 600px;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 40px auto;
+    min-height: 100vh;
+
+    textarea {
+        resize: none;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input {
+        border: 2px solid #ccc;
+        border-radius: 4px;
+    }
+
+    h4 {
+        text-align: left;
+    }
+
+    .tags {
+        width: 600px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+
+        label {
+            margin: 0;
+        }
+
+        .tag {
+            display: inline-block;
+        }
+        
+        input {
+            margin-right: 8px;
+        }
+    }
 }
 
 header {
@@ -57,23 +91,25 @@ header {
         color: #999;
     }
 
-    .tags {
-        margin-bottom: 10px;
-        .tag {
-            display: inline-block;
-            background-color: #eee;
-            border: 1px solid #ddd;
-            margin-right: 8px;
-            border-radius: 8px;
-            padding: 4px 6px;
-            margin-bottom: 8px;
-        }
-    }
-
     .action-bar {
         text-align: right;
     }
 }
+
+.tags {
+    margin-bottom: 10px;
+    .tag {
+        display: inline-block;
+        background-color: #eee;
+        border: 1px solid #ddd;
+        margin-right: 8px;
+        border-radius: 8px;
+        padding: 4px 6px;
+        margin-bottom: 8px;
+    }
+}
+
+// Edit page
 
 footer {
     background-color: #998a8a;
